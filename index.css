@@ -1,0 +1,619 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#main{
+    width: 640px;
+    height: 1008px;
+    position: absolute;
+    left:50%;
+    top:0;
+    margin-left: -320px;
+    transform-origin:top;/*设置缩放的基准点是顶端的中心点*/
+    -webkit-transform-origin: top;
+}
+#loading{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    z-index: 11;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+.loadBox{
+    position: absolute;
+    top:40%;
+    width: 80%;
+    height: 40px;
+    margin: 0 10%;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+.progress{
+    display: block;
+    width: 0;
+    height: 40px;
+    background-image:-webkit-linear-gradient(45deg,#61bb61 25%,#72c272 50%,#61bb61 75%, #72c272 100%) ;
+    background-size:40px 40px ;
+    background-repeat: repeat-x;
+    transition:all 1s;
+    -webkit-transition: 1s;
+}
+
+#onePage{
+    width: 100%;
+    height: 100%;
+    background: url(images/phoneBg.jpg) no-repeat;
+    position: absolute;
+    z-index: 10;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+.resume .photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.resume{
+    width: 100%;
+    height: 100%;
+    background:url("./images/bgOne.jpg") no-repeat 0px 5px;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+.resume .photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform: translate(220px,50px);
+}
+.resume .jl{
+    padding-top: 50px;
+    margin: 50px 0 0 102px;
+}
+
+.resume .jl li{
+    list-style: none;
+    color: white;
+    font-size: 30px;
+    padding: 0 20px;
+    height: 55px;
+    line-height: 55px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 1px 1px 4px 0 white;
+    margin-top: 20px;
+    background-image:-webkit-linear-gradient(60deg,#c9a1aa 5%,#ceaaac 30%,#d0b8ac 75%, #c8b0a3 100%) ;
+}
+.jl li:nth-child(even){
+    -webkit-transform: translate(-510px,0);
+    transform: translate(-510px,0);
+}
+.jl li:nth-child(odd){
+    -webkit-transform: translate(500px,0);
+    transform: translate(500px,0);
+}
+#jl li{
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition: 1s ;
+    transition: 1s;
+}
+
+.next{
+    border:2px solid #0F0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left:276px;
+    top:894px;
+    animation:move 3s ease-in-out infinite;
+    background: url("./images/cuttwo.png") no-repeat;
+}
+
+@keyframes move {
+    0%{
+        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+@-webkit-keyframes move {
+    0%{
+        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+/*-----------上面是loading之后的第一页------------------------------*/
+.speaker{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    left:50%;
+    bottom:0;
+    margin-left: -320px;
+    transform: translate(0,1008px);
+    -webkit-transform: translate(0,1008px);
+    transition:1s;
+    -webkit-transition:1s;
+    background: url("./images/bgTwo.jpg") no-repeat 0 5px;
+}
+.speaker h2{
+    position: absolute;
+    left: 10%;
+    top: 14%;
+    font-size: 40px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 0 2px #cccccc;
+    background: green;
+    color: white;
+    animation: rubberBand 1s infinite;
+}
+@-webkit-keyframes rubberBand {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(.95, 1.05, 1);
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, .95, 1);
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes rubberBand {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(.95, 1.05, 1);
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, .95, 1);
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.rubberBand {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+}
+.pre{
+    border:2px solid #0F0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left:256px;
+    top:25px;
+    animation:move 3s ease-in-out infinite;
+    background: url("./images/cutone.png") no-repeat;
+}
+.next2{
+    border:2px solid #0F0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left:266px;
+    bottom:25px;
+    animation:move 3s ease-in-out infinite;
+    background: url("./images/cuttwo.png") no-repeat;
+}
+.skill p{
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left: -45px;
+    margin-top:-45px;
+    color: black;
+    font-size: 30px;
+    background: greenyellow;
+    border-radius: 50%;
+}
+
+#skill p {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    transition:1s;
+    -webkit-transition:1s;
+}
+#skill p:nth-child(1){
+    left:50%;
+    top:30%;
+}
+#skill p:nth-child(2){
+    left:20%;
+    top:40%
+}
+#skill p:nth-child(3){
+    left:80%;
+    top:40%
+}
+#skill p:nth-child(4){
+    left:20%;
+    top:60%;
+}
+#skill p:nth-child(5){
+    left:80%;
+    top:60%;
+}
+#skill p:nth-child(6){
+    left:50%;
+    top:70%
+}
+/*---------------以上是第二页-------------------------------*/
+.selfEvaluate{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    background: url("./images/bgThree.jpg") no-repeat 0 5px;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+.selfEvaluate h2{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    font-size: 40px;
+    background: green;
+    box-shadow: 2px 2px 0 2px white;
+    color: white;
+    animation:flip 2s infinite;
+}
+/*----------------------flip动画------------*/
+@-webkit-keyframes flip {
+    from {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+        transform: perspective(400px) scale3d(.95, .95, .95);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    to {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes flip {
+    from {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+        transform: perspective(400px) scale3d(.95, .95, .95);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    to {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+}
+
+.animated.flip {
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-animation-name: flip;
+    animation-name: flip;
+}
+
+
+/*------------------------------------*/
+.selfEvaluate p{
+    width: 0px;
+    height: 0px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 3px #fff;
+    color: black;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 30px;
+    font-weight: 900;
+    transition: 1s;
+    -webkit-transition: 1s;
+    background: greenyellow;
+
+}
+.evaluate p:nth-child(1){
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+.evaluate p:nth-child(2){
+    position:absolute ;
+    top: 40%;
+    left: 17%;
+}
+.evaluate p:nth-child(3){
+    position: absolute;
+    top: 50%;
+    left: 22%;
+}
+.evaluate p:nth-child(4){
+    position: absolute;
+    top: 60%;
+    left: 17%;
+}
+.evaluate p:nth-child(5){
+    position: absolute;
+    top: 70%;
+    left: 10%;
+}
+#selfEvaluate p{
+    width: 420px;
+    height: 50px;
+    line-height: 50px;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+#selfEvaluate .pre1{
+    border:2px solid #0F0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left:256px;
+    top:25px;
+    animation:move 3s ease-in-out infinite;
+    background: url("./images/cutone.png") no-repeat;
+}
+
+/*以下是兴趣爱好页*/
+
+.hobby{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("./images/bgfour.jpg") no-repeat;
+}
+#hobby{
+    -webkit-animation: tada 1s;
+    -o-animation: tada 1s;
+    animation: tada 1s;
+}
+@-webkit-keyframes tada {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes tada {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.hobby  h2{
+    position: absolute;
+    left: 10%;
+    top:20% ;
+    border: 1px solid red;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+
+}
+#hobby h2{
+    -webkit-animation: fadeOutLeft 1s;
+    -o-animation: fadeOutLeft 1s;
+    animation: fadeOutLeft 1s;;
+}
+@-webkit-keyframes fadeOutLeft {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes fadeOutLeft {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.fadeOutLeft {
+    -webkit-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+}
+.hobby p{
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    width: 50%;
+    height: 10%;
+    font-size: 30px;
+}
+.next3{
+    border:2px solid #0F0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left:266px;
+    bottom:25px;
+    animation:move 3s ease-in-out infinite;
+    background: url("./images/cuttwo.png") no-repeat;
+}
+
+.pre2{
+    border:2px solid #0F0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left:256px;
+    top:25px;
+    animation:move 3s ease-in-out infinite;
+    background: url("./images/cutone.png") no-repeat;
+}
